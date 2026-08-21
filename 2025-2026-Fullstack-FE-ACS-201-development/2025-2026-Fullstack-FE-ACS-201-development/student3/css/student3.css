@@ -1,0 +1,116 @@
+@import url('https://googleapis.com');
+
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navgație Dark */
+.bg-black { background-color: #000 !important; }
+
+/* Hero Sport */
+.hero-sport {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-bg-container {
+    position: absolute;
+    inset: 0;
+}
+
+.image-bg-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dark-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 20%, #080808 90%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.fw-black { font-weight: 900; }
+.italic-text { font-style: italic; font-family: 'Oswald', sans-serif; }
+.letter-spacing-5 { letter-spacing: 10px; }
+
+/* Sport Card */
+.sport-card {
+    background: #111;
+    border-left: 4px solid #dc3545;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.5);
+}
+
+.divider-red {
+    height: 2px;
+    width: 50px;
+    background: #dc3545;
+}
+
+/* Angled Image Frame */
+.angled-frame {
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: 0.5s;
+}
+
+.angled-frame:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Contact Dark */
+.contact-card-dark {
+    background: #111;
+    border: 1px solid #333;
+}
+
+.border-danger { border-color: #dc3545 !important; }
+.btn-danger { background-color: #dc3545; border-radius: 0; }
+
+/* Culori Specifice Lambo (le adăugăm pentru pagina următoare) */
+.lambo-yellow { color: #ffcc00 !important; }
+.border-lambo { border-color: #ffcc00 !important; }
+.btn-lambo { background-color: #ffcc00; color: black; font-weight: bold; border-radius: 0; }
+
+/* Forțăm textul din formulare să fie alb */
+.contact-card-dark label {
+    color: #ffffff !important;
+}
+
+.contact-card-dark .form-control {
+    color: #ffffff !important;
+}
+
+/* Schimbăm culoarea placeholder-ului (textul de fundal) să fie un gri deschis vizibil */
+.contact-card-dark .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Ne asigurăm că input-ul rămâne transparent și nu devine alb la click */
+.contact-card-dark .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+    box-shadow: none;
+}
+
+/* Focus galben pentru Lamborghini */
+.border-warning:focus {
+    border-color: #ffcc00 !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 204, 0, 0.25) !important;
+}
+
+/* Stil pentru butonul de Lambo */
+.btn-warning {
+    background-color: #ffcc00 !important;
+    border: none;
+}

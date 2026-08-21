@@ -1,0 +1,164 @@
+:root {
+    --primary: #111111;
+    --accent: #c5a059;
+    --secondary: #f4f4f4;
+    --danger: #d9534f;
+    --success: #28a745;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+/* Navigacioni */
+.main-nav {
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    height: 65vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)),
+    url("https://wallpaper.forfun.com/fetch/b4/b4e2a82e34536b84d37b1b86944dca82.jpeg") center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: #FFD700;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Fleet Grid */
+.main-content {
+    padding: 60px 7%;
+}
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.section-label {
+    grid-column: 1 / -1;
+    margin: 60px 0 30px;
+    padding-left: 15px;
+    border-left: 5px solid #FFD700;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Card Styling */
+.card {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.model-year {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #FFD700;
+    color: #111;
+    padding: 5px 15px;
+    font-weight: 800;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+
+.price-tag {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.btn-primary {
+    display: block;
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+}
+
+/* Footer */
+.main-footer {
+    background: #111;
+    color: white;
+    padding: 60px 5%;
+    text-align: center;
+    border-top: 4px solid #FFD700;
+}

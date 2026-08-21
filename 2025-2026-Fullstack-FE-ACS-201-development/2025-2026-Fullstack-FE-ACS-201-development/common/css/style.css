@@ -1,0 +1,75 @@
+/* Reset și fonturi */
+@import url('https://googleapis.com');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #212529;
+    padding-top: 56px; /* Spațiu pentru navigația fixă */
+}
+
+/* Stil Secțiune Hero */
+#photo {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../photos/fundal.jpg') center/cover no-repeat;
+}
+
+.letter-spacing {
+    letter-spacing: 3px;
+}
+
+/* Grid-ul de mașini îmbunătățit */
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Cardurile de mașini cu efect de hover modern */
+.car-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 220px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Textul de pe imagini */
+.car-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.car-overlay p {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Formular de contact */
+.form-control:focus {
+    border-color: #212529;
+    box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.1);
+}
